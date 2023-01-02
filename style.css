@@ -1,117 +1,162 @@
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-     :root {
-        --lime-green: #1eb38b;
-        --bright-red: #dc424d;
-        --facebook: #198ef5;
-        --twitter: #19a1f5;
-        --instagram: linear-gradient(#b3b3b3, #ff463a);
-        --youtube: #c30329;
-        --dark-theme-toggle: linear-gradient(#388fe6, #3eda82);
-        --light-theme-toggle: #aeb3cb;
-        /* dark-theme-colors */
-        --very-dark-blue: #1e202a;
-        --top-background-patttern: #1f212e;
-        --card-background: #252a41;
-        --text-color: #8b97c6;
-        --text-color-white: #ffffff;
-        /*light-theme-colors */
-        --paleblue-topbackground-color: #f5f7ff;
-        --grayish-blue-card-background: #f0f2fa;
-        --dark-grayishblue-textcolor: #63687e;
-        --very-darkblue-text: #1e202a;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .wrapper-container {
-        margin: 40px 100px;
-        display: flex;
-        flex-direction: column;
-        height: 200px
-    }
-    
-    .heading {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .heading .sub-heading {
-        flex-direction: column;
-    }
-    
-    .sub-heading h2 {
-        font-family: 'Inter', sans-serif;
-    }
-    
-    .sub-heading h5 {
-        font-family: 'Inter', sans-serif;
-    }
-    
-    .container {
-        display: grid;
-        height: 80%;
-    }
-    
-    .one-row {
-        height: 40%;
-    }
-    
-    .first-row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .card {
-        padding: 10px;
-        height: 20%;
-    }
-    
-    .card-head {
-        display: flex;
-        flex-direction: row;
-        height: 10%;
-        margin: 10px 0 10px 0;
-    }
-    
-    .card-img-top {
-        width: 5px;
-        margin-right: 10px;
-    }
-    
-    .card-body .card-numberFollowers {
-        font-family: 'Inter', sans-serif;
-        font-size: 38px;
-        font-weight: 700;
-    }
-    
-    .card-body h3 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 100;
-        font-size: 12px;
-        color: var(--dark-grayishblue-textcolor);
-        letter-spacing: 2px;
-    }
-    
-    .card-body .status-container {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .status-container span {
-        margin-right: 10px;
-    }
-    
-    .status-container .statusGreen {
-        color: var(--lime-green);
-    }
-    
-    .status-container .statusRed {
-        color: var(--bright-red);
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+ :root {
+    --lime-green: #1eb38b;
+    --bright-red: #dc424d;
+    --facebook: #198ef5;
+    --twitter: #19a1f5;
+    --instagram: linear-gradient(#b3b3b3, #ff463a);
+    --youtube: #c30329;
+    --dark-theme-toggle: linear-gradient(#388fe6, #3eda82);
+    --light-theme-toggle: #aeb3cb;
+    /* dark-theme-colors */
+    --very-dark-blue: #1e202a;
+    --top-background-patttern: #1f212e;
+    --card-background: #252a41;
+    --text-color: #8b97c6;
+    --text-color-white: #ffffff;
+    /*light-theme-colors */
+    --paleblue-topbackground-color: #f5f7ff;
+    --grayish-blue-card-background: #f0f2fa;
+    --dark-grayishblue-textcolor: #63687e;
+    --very-darkblue-text: #1e202a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper-container {
+    margin: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    height: 200px
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading .sub-heading {
+    flex-direction: column;
+}
+
+.sub-heading h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+.sub-heading h5 {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 80%;
+}
+
+.one-row {
+    height: 40%;
+}
+
+.first-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.card {
+    padding: 10px;
+    height: 20%;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    margin: 10px 0 10px 0;
+}
+
+.card-head .card-img-top {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.card-body .card-numberFollowers {
+    font-family: 'Inter', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.card-body h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--dark-grayishblue-textcolor);
+    letter-spacing: 2px;
+}
+
+.card-body .status-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.status-container span {
+    margin-right: 10px;
+}
+
+.status-container .statusGreen,
+.overview .statusGreen {
+    color: var(--lime-green);
+}
+
+.status-container .statusRed,
+.overview .statusRed {
+    color: var(--bright-red);
+}
+
+.overview-today .second {
+    padding: 25px;
+    display: flex;
+}
+
+.second .card-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.second .card-top h5 {
+    font-family: 'Inter', sans-serif;
+}
+
+.second .card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.second .card-bottom .card-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.card-bottom .overview {
+    display: flex;
+    flex-direction: row;
+    right: 0;
+}
+
+.card-bottom .overview img {
+    margin-right: 5px;
+}
