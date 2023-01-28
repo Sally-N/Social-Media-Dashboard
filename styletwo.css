@@ -7,7 +7,7 @@
     --twitter: #19a1f5;
     --instagram: linear-gradient(#b3b3b3, #ff463a);
     --youtube: #c30329;
-    --dark-theme-toggle: linear-gradient(#388fe6, #3eda82);
+    --dark-theme-toggle: linear-gradient(to right, #388fe6, #3eda82);
     --light-theme-toggle: #aeb3cb;
     /* dark-theme-colors */
     --very-dark-blue: #1e202a;
@@ -91,6 +91,7 @@ body {
     width: 30px;
     border-radius: 30px;
     height: 30px;
+    
         /* box-shadow: inset 0 0 5px #000; */
 }
 
@@ -248,3 +249,9 @@ body {
 .card-bottom .overview img {
     margin-right: 5px;
 }
+
+/* @media screen and (max-width: 414px) {
+    body {
+      width: 414px;
+    }
+  } */
