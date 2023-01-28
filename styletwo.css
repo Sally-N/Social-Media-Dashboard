@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
- :root {
+
+:root {
     --lime-green: #1eb38b;
     --bright-red: #dc424d;
     --facebook: #198ef5;
@@ -25,21 +26,23 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--text-color-white);
 }
 
 .wrapper-container {
-    margin: 40px 100px;
+    margin: 20px 100px 10px;
     display: flex;
     flex-direction: column;
     height: 200px
 }
 
-.wrapper-container .heading {
-    height: 50px;
+.heading {
+    /* height: 50px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .heading .sub-heading {
@@ -48,10 +51,15 @@ body {
 
 .sub-heading h2 {
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
 }
 
 .sub-heading h5 {
     font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }
 
 .switch {
@@ -70,31 +78,59 @@ body {
     height: 30px;
     width: 90px;
     border-radius: 20px;
-    background-color: blue;
-    border: 1px solid;
-    background-color: var(--dark-theme-toggle);
-    border-color: var(--facebook);
+    border: 1px solid --dark-grayishblue-textcolor;
+    background-color: var(--light-theme-toggle);
+
 }
 
 .slideBtn {
     float: right;
-    border: 1px solid;
-    border-color: var(--facebook);
+    border: 1px solid --dark-grayishblue-textcolor;
+    background-color: var(--text-color-white);
     /* margin: 1px; */
     width: 30px;
     border-radius: 30px;
     height: 30px;
-    background-color: var(--paleblue-topbackground-color)
-    /* box-shadow: inset 0 0 5px #000; */
-}
-
-.wrapper-container .container {
-    background-color: var(--light-theme-toggle);
+        /* box-shadow: inset 0 0 5px #000; */
 }
 
 
+.one-row {
+    height: 40%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+.grid-accounts {
+    margin-bottom: 15px;
+}
 
 
+.accounts {
+    height: 200px;
+}
+
+
+.accounts .card {
+    padding: 20px 0 0 0;
+    height: 20%;
+    border-style: solid;
+    border-top-width: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.accounts .card,
+.activity .card {
+    background-color: var(--grayish-blue-card-background);
+    border-color: var(--grayish-blue-card-background);
+}
 
 #one {
     border-top-color: var(--facebook);
@@ -116,11 +152,12 @@ body {
     display: flex;
     flex-direction: row;
     height: 10%;
-    margin: 10px 0 10px 0;
+    padding-bottom: 20px;
+    /* margin: 10px 0 10px 0; */
 }
 
 .card-head .card-img-top {
-    margin-right: 10px;
+    margin-right: 15px;
     width: 20px;
     height: 20px;
 }
@@ -137,11 +174,13 @@ body {
     font-size: 12px;
     color: var(--dark-grayishblue-textcolor);
     letter-spacing: 2px;
+    padding-bottom: 15px;
 }
 
 .card-body .status-container {
     display: flex;
     flex-direction: row;
+
 }
 
 .status-container span {
@@ -158,9 +197,21 @@ body {
     color: var(--bright-red);
 }
 
+.overview-today h4 {
+    margin-bottom: 15px;
+}
+
+.overview-today .activity {
+    height: 120px;
+}
+
 .overview-today .second {
     padding: 25px;
     display: flex;
+}
+
+.overview-today .grid {
+    row-gap: 20px;
 }
 
 .second .card-top {
@@ -196,161 +247,4 @@ body {
 
 .card-bottom .overview img {
     margin-right: 5px;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.one-row {
-    height: 40%;
-}
-
-.first-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.one-row .card {
-    padding: 10px;
-    height: 20%;
-    border-style: solid;
-    border-top-width: 10px;
-}
-
-#one {
-    border-top-color: var(--facebook);
-}
-
-#two {
-    border-top-color: var(--twitter);
-}
-
-#three {
-    border-top-color: var(--instagram);
-}
-
-#four {
-    border-top-color: var(--youtube);
-}
-
-.card-head {
-    display: flex;
-    flex-direction: row;
-    height: 10%;
-    margin: 10px 0 10px 0;
-}
-
-.card-head .card-img-top {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.card-body .card-numberFollowers {
-    font-family: 'Inter', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-}
-
-.card-body h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    color: var(--dark-grayishblue-textcolor);
-    letter-spacing: 2px;
-}
-
-.card-body .status-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.status-container span {
-    margin-right: 10px;
-}
-
-.status-container .statusGreen,
-.overview .statusGreen {
-    color: var(--lime-green);
-}
-
-.status-container .statusRed,
-.overview .statusRed {
-    color: var(--bright-red);
-}.first-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.one-row .card {
-    padding: 10px;
-    height: 20%;
-    border-style: solid;
-    border-top-width: 10px;
-}
-
-#one {
-    border-top-color: var(--facebook);
-}
-
-#two {
-    border-top-color: var(--twitter);
-}
-
-#three {
-    border-top-color: var(--instagram);
-}
-
-#four {
-    border-top-color: var(--youtube);
-}
-
-.card-head {
-    display: flex;
-    flex-direction: row;
-    height: 10%;
-    margin: 10px 0 10px 0;
-}
-
-.card-head .card-img-top {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.card-body .card-numberFollowers {
-    font-family: 'Inter', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-}
-
-.card-body h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    color: var(--dark-grayishblue-textcolor);
-    letter-spacing: 2px;
-}
-
-.card-body .status-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.status-container span {
-    margin-right: 10px;
-}
-
-.status-container .statusGreen,
-.overview .statusGreen {
-    color: var(--lime-green);
-}
-
-.status-container .statusRed,
-.overview .statusRed {
-    color: var(--bright-red);
 }
