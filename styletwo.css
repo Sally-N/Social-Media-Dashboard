@@ -250,8 +250,12 @@ body {
     margin-right: 5px;
 }
 
-/* @media screen and (max-width: 414px) {
-    body {
-      width: 414px;
-    }
-  } */
+@media screen and (max-width: 414px) {
+   .wrapper-container{
+    margin: 20px 10px;
+   }
+   .heading{
+    flex-direction: column;
+    justify-content: center;
+   }
+  }

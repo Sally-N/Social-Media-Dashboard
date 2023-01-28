@@ -46,7 +46,7 @@ const four = document.getElementById('four');
 
 
 function themeToggle() {
-    if (slideButton.style.position = "right") {
+    if (slideButton.style.position != "left") {
         console.log("light theme on")
 
         // allCards.style.backgroundColor = "var( --card-background)"
@@ -67,11 +67,25 @@ function themeToggle() {
         three.style.borderTopColor = "var(--instagram)";
         four.style.borderTopColor = "var(--youtube)";
     } else {
+        one.style.borderTopColor = "var(--facebook)";
+        two.style.borderTopColor = "var(--twitter)";
+        three.style.borderTopColor = "var(--instagram)";
+        four.style.borderTopColor = "var(--youtube)";
+        slideButton.style.float = "right";
+        slideButton.style.backgroundColor = "var(--text-color-white)"
+        slideHousing.style.backgroundColor = "var(--light-theme-toggle)";
+        darkGreyTexts.forEach(darkGreyText => {
+            darkGreyText.style.color = "var(--very-darkblue-text)"
+            texts.forEach(text => text.style.color = "var(--text-color-white)");
+        allCards.forEach(card => { card.style.backgroundColor = "var(--grayish-blue-card-background)" });
+        allCards.forEach(card => { card.style.borderColor = "var(--grayish-blue-card-background)" });
+        root.style.backgroundColor = "var(--text-color-white)";
 
+        });
     }
+
 
 }
 
-slideHousing.addEventListener("mousemove", themeToggle)
-
-themeToggle()
+slideHousing.addEventListener("mousemove", themeToggle);
+slideHousing.addEventListener("click", themeToggle);
