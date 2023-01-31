@@ -56,8 +56,8 @@ function themeToggle() {
         root.style.backgroundColor = "var(--very-dark-blue)";
 
         slideButton.style.float = "left";
-        slideButton.style.backgroundColor = "var(--very-dark-blue)"
-        slideHousing.style.backgroundColor = "var(--lime-green";
+        slideButton.style.backgroundColor = "var(--very-dark-blue)";
+        slideHousing.style.backgroundImage = "var(--dark-theme-toggle)";
         darkGreyTexts.forEach(darkGreyText => {
             darkGreyText.style.color = "var(--text-color)"
 
