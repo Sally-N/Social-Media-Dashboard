@@ -5,8 +5,9 @@
     --bright-red: #dc424d;
     --facebook: #198ef5;
     --twitter: #19a1f5;
-    --instagram: linear-gradient(#b3b3b3, #ff463a);
-    --youtube: #c30329;
+    --ig-1: hsl(37, 97%, 70%);
+    --ig-2: hsl(329, 70%, 58%);
+    --instagram: linear-gradient(to right, var(--ig-1), var(--ig-2));    --youtube: #c30329;
     --dark-theme-toggle: linear-gradient(to right, #388fe6, #3eda82);
     --light-theme-toggle: #aeb3cb;
     /* dark-theme-colors */
@@ -149,7 +150,8 @@ body {
 }
 
 #three {
-    border-top-color: var(--instagram);
+    border-image: linear-gradient(to right, var(--ig-1), var(--ig-2)) 1 0 0 0;
+
 }
 
 #four {
@@ -287,11 +289,11 @@ body {
 
     }
 
-    .grid-accounts{
+    .grid-accounts {
         margin-bottom: 0;
     }
 
-  
+
 
     .accounts .card {
         /* width: 345px; */
