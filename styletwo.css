@@ -25,6 +25,7 @@
 }
 
 body {
+    /* width: 1440px; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,10 +33,10 @@ body {
 }
 
 .wrapper-container {
-    margin: 20px 100px 10px 20pxsss;
+    margin: 20px 100px 10px 100px;
     display: flex;
     flex-direction: column;
-    height: 200px
+    /* height: 200px */
 }
 
 .heading {
@@ -81,12 +82,28 @@ body {
 }
 
 .slider {
-
     height: 30px;
     width: 90px;
     border-radius: 20px;
     border: 1px solid --dark-grayishblue-textcolor;
     background-color: var(--light-theme-toggle);
+
+}
+.sliderDarkTheme {
+    height: 30px;
+    width: 90px;
+    border-radius: 20px;
+    border: 1px solid --dark-grayishblue-textcolor;
+    background-image: var(--dark-theme-toggle);
+
+}
+.slider {
+    height: 30px;
+    width: 90px;
+    border-radius: 20px;
+    border: 1px solid --dark-grayishblue-textcolor;
+    background-color: var(--light-theme-toggle);
+    cursor: move;
 
 }
 
@@ -98,10 +115,22 @@ body {
     width: 30px;
     border-radius: 30px;
     height: 30px;
+    cursor: move;
 
     /* box-shadow: inset 0 0 5px #000; */
 }
 
+.slideBtnToLeft {
+    float: left;
+    border: 1px solid --dark-grayishblue-textcolor;
+    background-color: var(--dark-grayishblue-textcolor);
+    /* margin: 1px; */
+    width: 30px;
+    border-radius: 30px;
+    height: 30px;
+
+    /* box-shadow: inset 0 0 5px #000; */
+}
 
 .one-row {
     height: 40%;
@@ -109,7 +138,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
 }
 
@@ -260,7 +289,24 @@ body {
     margin-right: 5px;
 }
 
-@media screen and (min-width: 375px) {
+/* .dark-grey{
+    color: var(--text-color);
+} */
+
+
+
+@media screen and (min-width: 1024px) {
+    .wrapper-container {
+        height: 200px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media screen and (max-width:767px) and (min-width: 375px) {
     .wrapper-container {
         margin: 20px 15px 20px 15px;
         height: 2200px;
@@ -294,17 +340,16 @@ body {
         margin-bottom: 15px;
     }
 
-
-
     .accounts .card {
         /* width: 345px; */
         margin: 0 0 10 00px;
 
     }
 
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
     .wrapper-container {
         margin: 20px 15px 20px 15px;
         height: 1200px;
@@ -321,6 +366,7 @@ body {
         font-size: 14px;
         font-weight: 400;
     }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
